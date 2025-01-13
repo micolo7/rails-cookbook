@@ -9,3 +9,6 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :categories, only: [:index, :show, :new]
 end
+Rails.application.routes.draw do
+  resources :categories, only: [:index, :show, :new, :create]
+end

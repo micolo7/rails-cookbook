@@ -1,0 +1,6 @@
+<h1><%= @category.name %></h1>
+
+<p><strong>Category ID:</strong> <%= @category.id %></p>
+<p><strong>Created At:</strong> <%= @category.created_at.strftime("%B %d, %Y") %></p>
+
+<%= link_to "Back to Categories", categories_path, class: "btn btn-secondary" %>
