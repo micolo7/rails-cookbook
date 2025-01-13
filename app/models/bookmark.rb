@@ -1,7 +1,7 @@
 class Bookmark < ApplicationRecord
   # Validations
   validates :comment, length: { maximum: 250 }
-  # Ensure associations are valid
+  # Confirming associations are valid
   validates :recipe_id, presence: true
   belongs_to :recipe
   validates :category_id, presence: true
