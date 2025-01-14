@@ -36,7 +36,19 @@ Recipe.create!(
       description: "A decadent dessert with a gooey chocolate center, served warm with vanilla ice cream.",
       image_url: "https://example.com/chocolate_lava_cake.jpg",
       rating: 9.5
-    }
+    },
+    {
+      name: "Nicoise Salad",
+      description: "A popular and nutritious salad including canned tuna in oil, olives, anchovies in oil, Olive oil dressing, Lettuce, potatoes or green beans.",
+      image_url: "https://example.com/nicoise_salad.jpg",
+      rating: 9.5
+    },
+    {
+      name: "Eggs Benedict",
+      description: "A Hollandaise sauce overs a gooey parboiled egg, served slices of smoked salmon on top of white sourdough bread.",
+      image_url: "https://example.com/eggs_benedict.jpg",
+      rating: 9.5
+    },
   ]
 )
 

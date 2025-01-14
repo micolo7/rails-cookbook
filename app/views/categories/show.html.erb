@@ -4,3 +4,18 @@
 <p><strong>Created At:</strong> <%= @category.created_at.strftime("%B %d, %Y") %></p>
 
 <%= link_to "Back to Categories", categories_path, class: "btn btn-secondary" %>
+
+<h1><%= @category.name %> Recipes</h1>
+
+<%= link_to "Add Recipe to Category", new_category_bookmark_path(@category), class: "btn btn-primary" %>
+
+<ul>
+  <% @category.bookmarks.each do |bookmark| %>
+    <li>
+      <%= bookmark.recipe.name %> |
+      <%= link_to bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{bookmark.recipe.name} from your #{@category.name} list"} %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Back to Categories", categories_path, class: "btn btn-secondary" %>

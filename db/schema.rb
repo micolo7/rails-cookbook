@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_13_110236) do
     t.bigint 'recipe_id', null: false
     t.bigint 'category_id', null: false
     t.text 'comment'
-    t.datetime 'created_at', null: false
+    t.datetime 'created_on', null: false
     t.datetime 'updated_at', null: false
     t.index ['category_id'], name: 'index_bookmarks_on_category_id'
     t.index ['recipe_id'], name: 'index_bookmarks_on_recipe_id'
@@ -26,7 +26,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_13_110236) do
 
   create_table 'categories', force: :cascade do |t|
     t.string 'name'
-    t.datetime 'created_at', null: false
+    t.datetime 'created_on', null: false
     t.datetime 'updated_at', null: false
   end
 
@@ -35,7 +35,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_13_110236) do
     t.text 'description'
     t.string 'image_url'
     t.decimal 'rating'
-    t.datetime 'created_at', null: false
+    t.datetime 'created_on', null: false
     t.datetime 'updated_at', null: false
   end
 
